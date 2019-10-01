@@ -9,6 +9,7 @@
   margin: 0 7.5px 15px;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   overflow: hidden;
   
   &:hover {
@@ -20,7 +21,7 @@
     }
 
     & .content {
-      opacity: 0.9;
+      opacity: 0.7;
     }
   }
 
