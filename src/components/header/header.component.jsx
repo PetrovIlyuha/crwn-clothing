@@ -9,7 +9,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux//cart/cart.selectors.js';
 import { selectCurrentUser } from '../../redux/user/user.selector.js';
 
-import { ReactComponent as Logo } from '../../assets/crown.svg';
+import { ReactComponent as Logo } from '../../assets/getNasty.svg';
 
 import './header.styles.scss';
 
