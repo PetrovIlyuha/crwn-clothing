@@ -4,23 +4,34 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
-
+  background: rgb(46, 189, 189);
+  border: 1px solid rgb(96, 96, 119);
+  border-radius: 8px;
+  transition: background 1.2s;
+  
   .logo-container {
-    height: 100%;
-    width: 70px;
-    padding: 25px;
+    height: 80%;
+    width: 30px;
+    // padding: 25px;
+    margin-bottom: 40px;
   }
-
+  
   .options {
     width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
+    
     .option {
       padding: 10px 15px;
       cursor: pointer;
+      color: white;
+      font-weight: 700;
+      transition: 1.2s color;
     }
   }
 }
+
+
+
