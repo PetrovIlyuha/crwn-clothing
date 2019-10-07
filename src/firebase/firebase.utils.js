@@ -24,7 +24,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   const snapShot = await userRef.get(); 
   const collectionSnapshot = await collectionRef.get();
 
-  console.log({ collection: collectionSnapshot.docs.map(doc => doc.data()) });
+  // console.log({ collection: collectionSnapshot.docs.map(doc => doc.data()) });
 
   if (!snapShot.exists) {
     const { displayName, email } = userAuth;
@@ -54,6 +54,23 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
   });
 
   return await batch.commit()
+}
+
+export const convertCollectionsSnapshotToMap = (collections) => {
+  const transformedCollection = collections.docs.map(doc => {
+    const { title, items } = doc.data();
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items
+    }
+  });
+
+ return transformedCollection.reduce((accumulator, collection) => {
+   accumulator[collection.title.toLowerCase()] = collection;
+   return accumulator;
+ }, {});
 }
 
 export const auth = firebase.auth();

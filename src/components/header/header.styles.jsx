@@ -21,7 +21,7 @@ export const HeaderContainer = styled.div`
 
 export const LogoContainer = styled(Link)`
   height: 80%;
-  width: 30px;a
+  width: 30px;
   margin-bottom: 40px;
 `;
 
