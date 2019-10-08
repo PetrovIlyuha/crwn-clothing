@@ -9,13 +9,12 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
-  background: rgb(46, 189, 189);
+  background: rgb(209, 198, 167);
   border: 1px solid rgb(96, 96, 119);
   border-radius: 8px;
   transition: background 1.2s;
-
-  &:hover {
-    background: rgb(26, 89, 189);
+   &:hover {
+    background: rgb(255, 165, 145);
   }
 `;
 
