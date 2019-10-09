@@ -1,3 +1,4 @@
+  
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
@@ -11,8 +12,8 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const CollectionsOverviewContainer = compose(
-      connect(mapStateToProps),
-      WithSpinner
-    )(CollectionsOverview);
+  connect(mapStateToProps),
+  WithSpinner
+)(CollectionsOverview);
 
 export default CollectionsOverviewContainer;
